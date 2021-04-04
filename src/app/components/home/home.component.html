@@ -9,8 +9,9 @@
 
 <div class="mt-10 p-4 flex flex-wrap justify-center">
   <div
+    *ngFor="let pokemon of pokemons"
     class="ml-4 text-2xl text-blue-400"
   >
-    <a>Pokemon</a>
+    <a [routerLink]="['/about/' + urlIdlookup[pokemon.name]]"  >{{ pokemon.name}}</a>
   </div>
 </div>
